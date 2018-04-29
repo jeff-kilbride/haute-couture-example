@@ -12,11 +12,5 @@ module.exports = {
  * @returns {Array}
  */
 function getRoutes(server) {
-  const table = server.table();
-  const t = [];
-  for (const r of table) {
-    t.push({ method: r.method, path: r.path });
-  }
-
-  return t;
+  return server.table().map((r) => ({ method: r.method, path: r.path }));
 }

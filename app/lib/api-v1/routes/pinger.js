@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  method: 'get',
+  method: 'GET',
   path: '/',
   options: {
     handler: () => ({ ping: 'pong' }),
